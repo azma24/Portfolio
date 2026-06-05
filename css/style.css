@@ -1,0 +1,300 @@
+/* ===========================
+   Reset & Base
+=========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #1a1a1a;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  /*レスポンシブ対応の基準値 */
+  height: auto;
+  /* 比率を維持し幅に合わせて高さが自動で変わるようにする指定 */
+  display: block;
+  /* 画像をブロック要素として扱う指定 */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "Zen Old Mincho", serif;
+}
+
+h2 {
+  font-size: 7rem;
+  font-family: "Zen Old Mincho", serif;
+  color: #b9b9b9;
+  opacity: 0.2;
+}
+
+h3 {
+  margin-bottom: 10px;
+
+  font-size: 2rem;
+  font-family: "Zen Old Mincho", serif;
+}
+
+h4 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 600;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+}
+
+/* ===========================
+   Layout
+=========================== */
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+}
+
+.header-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 46px;
+}
+
+.header-contents ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  font-family: "Zen Old Mincho", serif;
+}
+
+.header-contents li {
+  font-size: 0.9rem;
+}
+
+.fv-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  background-color: #9ba7c4;
+  position: relative;
+}
+
+.fv-contents {
+  padding-top: 150px;
+}
+
+.fv-message {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 30px;
+}
+
+.fv-message p {
+  font-size: 1.5rem;
+  font-family: "Shippori Mincho", serif;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+}
+
+.scroll-indicator::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100px;
+  background: #000;
+  margin: 30px auto 0;
+  animation: scroll-line 5s infinite;
+}
+
+@keyframes scroll-line {
+  0% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  50% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+.works-contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 85px;
+  padding: 120px 0;
+}
+
+.works-img {
+  width: 700px;
+  height: 500px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid #b9b9b9;
+}
+
+.works-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.works-txt p {
+  color: #6e6e6e;
+}
+
+.works-role {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 25px 0;
+  width: 350px;
+}
+
+.works-role span {
+  display: inline-block;
+  padding: 7px 24px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #1a1a1a;
+  font-size: 0.9rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.about {
+  padding-top: 170px;
+}
+
+.about-contents {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 30px;
+  padding: 50px 0;
+  margin: 0 40px;
+}
+
+.about-txt {
+  max-width: 800px;
+  line-height: 40px;
+  font-size: 0.9rem;
+}
+
+.about-img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact {
+  text-align: center;
+  background-image: url("../img/backgroundimg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 120px;
+  padding-bottom: 10px;
+}
+
+.contact-txt {
+  margin-bottom: 20px;
+}
+
+.contact-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 20px 100px;
+  border-radius: 999px;
+  background: #fff;
+  color: #000866;
+  border: 1px solid #1a1a1a;
+  font-size: 0.9rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.contact-btn:hover {
+  background: #000866;
+  color: #fff;
+}
+
+.footer-copy {
+  font-size: 0.7rem;
+  margin-top: 130px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 768px) {
+  .inner {
+    padding: 0 20px;
+    /* PCより最大値の余白を狭める */
+  }
+
+  .section {
+    padding: 60px 0;
+    /* PCよりセクション間を狭く */
+  }
+}
