@@ -1,0 +1,281 @@
+/* ===========================
+   Reset & Base
+=========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #1a1a1a;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #d1d1d1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-family: "Zen Old Mincho", serif;
+}
+
+h2 {
+  font-size: 7rem;
+  font-family: "Zen Old Mincho", serif;
+  color: #b9b9b9;
+  opacity: 0.5;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-family: "Zen Old Mincho", serif;
+}
+
+h4 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  font-family: "Shippori Mincho", serif;
+  font-weight: 600;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+}
+
+/* ===========================
+   Layout
+=========================== */
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+}
+
+.header-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 46px;
+}
+
+.header-contents ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  font-family: "Zen Old Mincho", serif;
+}
+
+.header-contents li {
+  font-size: 0.9rem;
+}
+
+.work-fv {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.work-fv-contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.work-fv-img {
+  display: inline-block;
+  width: 900px;
+  height: 700px;
+  margin: 120px 0;
+  overflow: hidden;
+  border: 48px solid #eeeeee;
+  background: #fff;
+}
+
+.work-fv-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.cta {
+  text-align: center;
+}
+
+.work-article-overview {
+  font-size: 1.2rem;
+  padding: 60px 0;
+  line-height: 40px;
+  letter-spacing: 10%;
+}
+
+.work-article-txt {
+  padding-bottom: 40px;
+  line-height: 35px;
+}
+
+.work-article-tags {
+  padding: 90px 0;
+}
+
+.work-article-tags p {
+  color: #979797;
+}
+
+.work-article-tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 25px 0;
+  width: 350px;
+}
+
+.work-article-tag span {
+  display: inline-block;
+  padding: 7px 24px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #1a1a1a;
+  font-size: 0.9rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.work-gallery-img-top {
+  padding-bottom: 50px;
+}
+
+.work-gallery-imgs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 56px;
+}
+
+.work-gallery-img {
+  display: inline-block;
+  width: 300px;
+  height: 700px;
+  overflow: hidden;
+}
+
+.work-gallery-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.work-more-works-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+}
+
+.work-more-works {
+  margin-top: 260px;
+  margin-bottom: 110px;
+}
+
+.work-more-works h3 {
+  text-align: center;
+  margin: 52px 0;
+}
+
+.work-more-works-link {
+  display: inline-block;
+  width: 400px;
+  height: 270px;
+  overflow: hidden;
+}
+
+.contact {
+  text-align: center;
+  background-image: url("../img/backgroundimg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 120px;
+  padding-bottom: 10px;
+}
+
+.contact-txt {
+  margin-bottom: 20px;
+}
+
+.contact-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 20px 100px;
+  border-radius: 999px;
+  background: #fff;
+  color: #000866;
+  border: 1px solid #1a1a1a;
+  font-size: 0.9rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.contact-btn:hover {
+  background: #000866;
+  color: #fff;
+}
+
+.footer-copy {
+  font-size: 0.7rem;
+  margin-top: 130px;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 768px) {
+  .inner {
+    padding: 0 20px;
+    /* PCより最大値の余白を狭める */
+  }
+
+  .section {
+    padding: 60px 0;
+    /* PCよりセクション間を狭く */
+  }
+}
