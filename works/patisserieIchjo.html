@@ -39,6 +39,8 @@
     />
   </head>
 
+  <button class="to-top" aria-label="ページ上部へ戻る">↑</button>
+
   <body>
     <header>
       <div class="header-inner">
@@ -56,23 +58,25 @@
 
     <main>
       <section class="work-fv">
-        <div class="work-fv-contents">
-          <div class="work-fv-img">
-            <img
-              src="../img/patisserieIchijo-top.png"
-              alt="pâtisserie Ichijoのサムネイル"
-            />
+        <a
+          href="https://azma24.github.io/reproduction-patisserie/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="work-fv-contents">
+            <div class="work-fv-img">
+              <img
+                src="../img/patisserieIchijo-top.png"
+                alt="pâtisserie Ichijoのサムネイル"
+              />
+            </div>
+            <div class="cta">
+              <p>サイトを見る ↗</p>
+            </div>
+
+            <!-- <h2>pâtisserie Ichijo</h2> -->
           </div>
-          <div class="cta">
-            <a
-              href="https://azma24.github.io/reproduction-patisserie/"
-              target="_blank"
-              rel="noopener noreferrer"
-              >サイトを見る ↗</a
-            >
-          </div>
-          <!-- <h2>pâtisserie Ichijo</h2> -->
-        </div>
+        </a>
       </section>
 
       <section class="work-article">
@@ -180,5 +184,7 @@
         </div>
       </section>
     </main>
+
+    <script src="../js/main.js"></script>
   </body>
 </html>
