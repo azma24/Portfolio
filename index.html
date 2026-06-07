@@ -39,6 +39,8 @@
     />
   </head>
 
+  <button class="to-top" aria-label="ページ上部へ戻る">↑</button>
+
   <body>
     <header>
       <div class="header-inner">
@@ -61,14 +63,12 @@
             <h2>WEB DESIGNER</h2>
             <div class="fv-message">
               <h2>DEVELOPER</h2>
-              <p>
-                見る人に迷わせない、<br />心地よく動くWebサイトを制作します。
-              </p>
+              <p>情報を整理し、<br />伝わるWebサイトを制作します。</p>
             </div>
           </div>
         </div>
 
-        <div class="scroll-indicator"><a href="#works">SCROLL</a></div>
+        <div class="scroll-indicator"><a href="#works">View Projects</a></div>
       </section>
 
       <section id="works">
@@ -85,7 +85,10 @@
                   </div>
                   <div class="works-txt">
                     <h3>pâtisserie Ichijo</h3>
-                    <p>Training Work</p>
+                    <p class="works-category">Training Work</p>
+                    <p class="works-note">
+                      老舗洋菓子店の世界観を伝え<br />来店につなげるブランドサイトを制作。
+                    </p>
                     <div class="works-role">
                       <span>Coding</span>
                       <span>Responsive Design</span>
@@ -109,7 +112,10 @@
                   </div>
                   <div class="works-txt">
                     <h3>ポートフォリオ</h3>
-                    <p>Training Work</p>
+                    <p class="works-category">Training Work</p>
+                    <p class="works-note">
+                      制作の思考と技術を伝える<br />自身のポートフォリオサイトを制作。
+                    </p>
                     <div class="works-role">
                       <span>Coding</span>
                       <span>Responsive Design</span>
@@ -130,7 +136,10 @@
                   </div>
                   <div class="works-txt">
                     <h3>燈山 Tozan</h3>
-                    <p>Training Work</p>
+                    <p class="works-category">Training Work</p>
+                    <p class="works-note">
+                      日本酒居酒屋の魅力とこだわりを伝え<br />予約につなげるWebサイトを制作。
+                    </p>
                     <div class="works-role">
                       <span>WordPress Development</span>
                       <span>Theme Customization</span>
@@ -177,5 +186,7 @@
         </div>
       </section>
     </main>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
