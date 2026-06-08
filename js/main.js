@@ -14,3 +14,18 @@ btn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+/*
+const EMAIL = "your@email.com";
+const el = document.querySelector(".email-copy");
+
+el.addEventListener("click", () => {
+  navigator.clipboard.writeText(EMAIL).then(() => {
+    el.classList.add("is-copied");
+  });
+});
+
+el.addEventListener("mouseleave", () => {
+  el.classList.remove("is-copied");
+});
+*/

@@ -271,6 +271,41 @@ header {
   white-space: nowrap;
 }
 
+/*
+.email-copy {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* 初期表示 
+.email-copy__copy,
+.email-copy__copied {
+  display: none;
+}
+
+/* ホバー時
+.email-copy:hover .email-copy__email {
+  display: none;
+}
+.email-copy:hover .email-copy__copy {
+  display: inline;
+}
+.email-copy:hover .email-copy__copied {
+  display: none;
+}
+
+/* クリック後 
+.email-copy.is-copied .email-copy__email {
+  display: none;
+}
+.email-copy.is-copied .email-copy__copy {
+  display: none;
+}
+.email-copy.is-copied .email-copy__copied {
+  display: inline;
+}
+*/
+
 .contact-btn:hover {
   background: #000866;
   color: #fff;
