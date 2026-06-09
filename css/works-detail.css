@@ -180,28 +180,59 @@ header {
   white-space: nowrap;
 }
 
-.work-gallery-img-top {
+/* === gallery === */
+.work-preview-gallery-pc {
   padding-bottom: 50px;
 }
 
-.work-gallery-imgs {
+.work-preview-gallery-sp {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 56px;
 }
 
-.work-gallery-img {
+.work-preview-gallery-img {
   display: inline-block;
   width: 300px;
   height: 700px;
   overflow: hidden;
 }
 
-.work-gallery-img img {
+.work-preview-gallery-img img {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+/* === browser === */
+.work-preview-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.work-preview-browser {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.work-preview-browser-pc,
+.work-preview-browser-sp {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.work-preview-browser-item {
+  height: 800px;
+  overflow-y: auto;
+}
+
+.work-preview-browser-item img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .work-more-works-links {
