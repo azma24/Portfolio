@@ -78,20 +78,20 @@
           <h3>Portfolio</h3>
           <div class="work-article-overview">
             <p>
-              クライアントに向けて制作の思考とできることを伝えるために制作した、自身のポートフォリオサイトです。作品をひと目で把握できることを優先し、「見ていて気持ちいい」と思っていただけるようなポートフォリオサイトを目指しました。
+              クライアントに向けて制作の思考とできることを伝えるために制作した、自身のポートフォリオサイトです。作品の見せ方だけでなく、閲覧体験そのものもひとつのデザインと捉え、細部まで意図を持って設計しました。
             </p>
           </div>
           <div class="work-article-txt">
-            <h4>作品が主役になる構成の優先順位</h4>
+            <h4>情報の取捨選択と視線の流れ</h4>
             <p>
-              クライアントが「何を作れる人か」を素早く把握できることを優先し、自己紹介よりも制作実績が前面に出る構成としました。Aboutページで人物像や制作への姿勢を伝え、TOPページとWorksで実績を見せる設計とすることで役割を分けています。色や装飾的な見出しをできるだけ排除したシンプルな設計も、作品が際立つことを意識した判断です。
+              作品に集中できる画面を目指し、見ればわかる情報はできるだけ省略しました。Works一覧やAboutページでは見出しをあえて配置せず、視線が作品や本文へ自然に向かうよう設計しています。また、余白や文字組みを調整することで情報のまとまりを整理し、装飾に頼らず内容が伝わる構成を意識しました。一方で、情報を減らしすぎると使いづらさにつながる可能性もあるため、シンプルさとわかりやすさのバランスを探りながら制作を進めました。
             </p>
           </div>
           <div class="work-article-txt">
-            <h4>次を見たくなる導線とアニメーションの強弱</h4>
+            <h4>次を見たくなる導線</h4>
             <p>
-              FV直下のView
-              Projectや詳細ページ下部の作品サムネイルなど、次へ進みたくなる導線を設けました。アニメーションは重要度に応じて使い分けており、ユーザーのアクションを促す要素には動きをしっかりつけ、見せるだけの要素には動きを抑えることで情報に強弱を持たせています。
+              ファーストビューは自己紹介だけで終わらないよう、「View
+              Project」を配置して作品一覧への入口として機能させています。スクロールを促す装飾ではなく、次に見てほしい場所を明確に示す導線として設計しました。また、詳細ページ下部には複数の作品サムネイルを並べ、閲覧後に自然と次の作品へ興味が向く構成を採用しています。単にページを移動させるのではなく、次の作品を見たくなる流れをつくることを意識しました。
             </p>
           </div>
           <div class="work-article-tags">
@@ -100,7 +100,7 @@
               <span>コーディング</span>
               <span>レスポンシブ対応</span>
               <span>デザイン設計</span>
-              <span>UI設計</span>
+              <span>情報設計</span>
             </div>
             <p>Tech</p>
             <div class="work-article-tag">
@@ -112,20 +112,32 @@
         </div>
       </section>
 
-      <section class="work-gallery">
+      <section class="work-preview">
         <div class="inner">
-          <div class="work-gallery-img-top">
-            <img src="../img/portfolio/portfolio-gallery-top.png" alt="" />
-          </div>
-          <div class="work-gallery-imgs">
-            <div class="work-gallery-img">
-              <img src="../img/portfolio/portfolio-sp1.png" alt="" />
+          <div class="work-preview-gallery">
+            <!-- PC版 -->
+            <div class="work-preview-gallery-pc">
+              <div class="work-preview-gallery-item">
+                <img src="../img/portfolio/portfolio-gallery-top.png" alt="" />
+              </div>
             </div>
-            <div class="work-gallery-img">
-              <img src="../img/portfolio/portfolio-sp2.png" alt="" />
-            </div>
-            <div class="work-gallery-img">
-              <img src="../img/portfolio/portfolio-sp3.png" alt="" />
+            <!-- SP版 -->
+            <div class="work-preview-gallery-sp">
+              <div class="work-preview-gallery-item">
+                <div class="work-preview-gallery-img">
+                  <img src="../img/portfolio/portfolio-sp1.png" alt="" />
+                </div>
+              </div>
+              <div class="work-preview-gallery-item">
+                <div class="work-preview-gallery-img">
+                  <img src="../img/portfolio/portfolio-sp2.png" alt="" />
+                </div>
+              </div>
+              <div class="work-preview-gallery-item">
+                <div class="work-preview-gallery-img">
+                  <img src="../img/portfolio/portfolio-sp3.png" alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -139,7 +151,9 @@
           <h3>More Works</h3>
           <div class="work-more-works-links">
             <div class="work-more-works-link">
-              <a href="#"><img src="../img/tozan-top.png" alt="" /></a>
+              <a href="../works/tozan.html"
+                ><img src="../img/tozan-top.png" alt=""
+              /></a>
             </div>
             <div class="work-more-works-link">
               <a href="../works/patisserieIchjo.html"
