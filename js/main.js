@@ -15,6 +15,25 @@ btn.addEventListener("click", () => {
   });
 });
 
+const targets = document.querySelectorAll(".zoom-out");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-active");
+      }
+    });
+  },
+  {
+    threshold: 0.3,
+  },
+);
+
+targets.forEach((target) => {
+  observer.observe(target);
+});
+
 /*
 const EMAIL = "your@email.com";
 const el = document.querySelector(".email-copy");
