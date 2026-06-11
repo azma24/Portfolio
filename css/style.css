@@ -456,11 +456,11 @@ header {
     margin-bottom: 80px;
   }
 
-  .fv-message {
+  .fv-row {
     flex-direction: column;
   }
 
-  .fv-message p {
+  .fv-row p {
     margin: 0 auto;
     font-size: 1rem;
     padding: 50px 0;
