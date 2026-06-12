@@ -21,6 +21,19 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+main {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadein 0.5s ease forwards;
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -78,6 +91,29 @@ button {
 .inner {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.reveal {
+  opacity: 0;
+  transition: 0.6s ease;
+}
+
+.fade-up {
+  transform: translateY(20px);
+}
+
+.fade-up.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.opacity {
+  opacity: 0;
+  transition-delay: 0.3s;
+}
+
+.opacity.is-active {
+  opacity: 1;
 }
 
 header {
@@ -139,6 +175,7 @@ header {
 
 .cta {
   text-align: center;
+  transition-delay: 0.5s;
 }
 
 .work-article-overview {
@@ -301,6 +338,7 @@ header {
   bottom: 20px;
   width: 48px;
   height: 48px;
+  z-index: 1100;
   border-radius: 50%;
   border: none;
   background: rgba(185, 199, 233, 0.9);
@@ -317,7 +355,7 @@ header {
     background-color 0.7s ease;
 }
 
-.to-top.is-show {
+.to-top.is-visible {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);

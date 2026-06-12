@@ -78,6 +78,21 @@ button {
   margin: 0 auto;
 }
 
+.reveal {
+  opacity: 0;
+  transition: 0.6s ease;
+}
+
+.fade-up {
+  transform: translateY(20px);
+  transition-delay: 0.5s;
+}
+
+.fade-up.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 header {
   position: fixed;
   top: 0;
@@ -153,14 +168,6 @@ header {
     transform: translateY(0);
   }
 }
-
-/*.scroll-indicator {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1rem;
-}*/
 
 .scroll-indicator {
   position: absolute;
@@ -316,6 +323,19 @@ header {
   line-height: 40px;
 }
 
+.about-page {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadein 0.5s ease forwards;
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .about-page-inner {
   max-width: 700px;
   margin: 0 auto;
@@ -413,7 +433,6 @@ header {
   border-radius: 50%;
   border: none;
   background: rgba(185, 199, 233, 0.9);
-
   color: #fff;
   cursor: pointer;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
@@ -427,7 +446,7 @@ header {
     background-color 0.7s ease;
 }
 
-.to-top.is-show {
+.to-top.is-visible {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
