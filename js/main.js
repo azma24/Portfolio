@@ -1,10 +1,11 @@
+// Topへ戻るボタン
 const btn = document.querySelector(".to-top");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
-    btn.classList.add("is-show");
+    btn.classList.add("is-visible");
   } else {
-    btn.classList.remove("is-show");
+    btn.classList.remove("is-visible");
   }
 });
 
@@ -15,18 +16,20 @@ btn.addEventListener("click", () => {
   });
 });
 
-const targets = document.querySelectorAll(".zoom-out");
+// スクロール発火アニメーション
+const targets = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-active");
+        observer.unobserve(entry.target);
       }
     });
   },
   {
-    threshold: 0.3,
+    threshold: 0.5,
   },
 );
 
