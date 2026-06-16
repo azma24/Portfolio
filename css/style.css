@@ -142,20 +142,20 @@ header {
   background:
     radial-gradient(
       ellipse at 0% 30%,
-      rgba(157, 170, 226, 0.3) 0%,
+      rgba(157, 170, 226, 0.1) 0%,
       rgba(5, 47, 235, 0.7) 10%,
       transparent 60%
     ),
     radial-gradient(
       ellipse at 70% 0%,
-      rgba(47, 145, 224, 0.5) 0%,
-      rgba(49, 131, 207, 0.4) 25%,
+      rgba(8, 129, 228, 0.5) 0%,
+      rgba(49, 131, 207, 0.3) 25%,
       transparent 60%
     ),
     radial-gradient(
       ellipse at 80% 70%,
-      rgba(108, 76, 223, 0.3) 0%,
-      rgba(108, 38, 221, 0.2) 30%,
+      rgba(136, 110, 230, 0.3) 0%,
+      rgba(169, 138, 219, 0.1) 30%,
       transparent 70%
     );
 }
