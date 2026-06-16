@@ -141,22 +141,22 @@ header {
 
   background:
     radial-gradient(
-      ellipse at 20% 30%,
-      rgba(8, 50, 235, 0.3) 0%,
-      rgba(90, 120, 255, 0.8) 25%,
-      transparent 55%
+      ellipse at 0% 30%,
+      rgba(157, 170, 226, 0.3) 0%,
+      rgba(5, 47, 235, 0.7) 10%,
+      transparent 60%
     ),
     radial-gradient(
-      ellipse at 70% 20%,
-      rgba(150, 170, 255, 0.35) 0%,
-      rgba(150, 170, 255, 0.7) 30%,
+      ellipse at 70% 0%,
+      rgba(47, 145, 224, 0.5) 0%,
+      rgba(49, 131, 207, 0.4) 25%,
       transparent 60%
     ),
     radial-gradient(
       ellipse at 80% 70%,
-      rgba(120, 190, 255, 0.3) 0%,
-      rgba(120, 190, 255, 0.1) 30%,
-      transparent 60%
+      rgba(108, 76, 223, 0.3) 0%,
+      rgba(108, 38, 221, 0.2) 30%,
+      transparent 70%
     );
 }
 
@@ -175,7 +175,7 @@ header {
 
 .fv-contents h2 {
   font-size: 7rem;
-  color: rgba(255, 255, 255, 1);
+  color: #fff;
 }
 
 .fv-row {
@@ -186,7 +186,7 @@ header {
 }
 
 .fv-row p {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-family: "Shippori Mincho", serif;
 }
 
@@ -361,39 +361,11 @@ header {
 .about {
   text-align: center;
   margin: 200px 0;
+  background-color: #fff;
 }
 
 .about p {
   line-height: 40px;
-}
-
-.about-page {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadein 0.5s ease forwards;
-}
-
-@keyframes fadein {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.about-page-inner {
-  max-width: 700px;
-  margin: 0 auto;
-  margin-top: 220px;
-  margin-bottom: 150px;
-}
-
-.about-page-contents {
-  font-size: 1.2rem;
-  line-height: 40px;
-}
-
-.about-page-contents p {
-  margin-bottom: 20px;
 }
 
 .contact {
@@ -403,9 +375,6 @@ header {
   background-repeat: no-repeat;
   padding-top: 120px;
   padding-bottom: 10px;
-}
-
-.contact {
   position: relative;
   overflow: hidden;
   background: #fff;
@@ -461,11 +430,50 @@ header {
   padding: 20px 100px;
   border-radius: 999px;
   background: #fff;
-  color: #000866;
-  border: 1px solid #1a1a1a;
+  color: #0918c0;
+  border: 1px solid #0918c0;
   font-size: 0.9rem;
   line-height: 1;
   white-space: nowrap;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #0918c0;
+  color: #fff;
+}
+
+/* aboutページ */
+
+.about-page {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadein 0.5s ease forwards;
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-page-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 220px;
+  margin-bottom: 150px;
+}
+
+.about-page-contents {
+  font-size: 1.2rem;
+  line-height: 40px;
+}
+
+.about-page-contents p {
+  margin-bottom: 20px;
 }
 
 /*
@@ -503,11 +511,6 @@ header {
 }
 */
 
-.contact-btn:hover {
-  background: #000866;
-  color: #fff;
-}
-
 .footer-copy {
   font-size: 0.7rem;
   margin-top: 130px;
@@ -519,9 +522,10 @@ header {
   bottom: 20px;
   width: 48px;
   height: 48px;
+  z-index: 1100;
   border-radius: 50%;
   border: none;
-  background: rgba(185, 199, 233, 0.9);
+  background: #000000;
   color: #fff;
   cursor: pointer;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
@@ -543,7 +547,7 @@ header {
 
 .to-top:hover {
   transform: translateY(-2px);
-  background: #000866;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 /* ===========================
@@ -564,14 +568,19 @@ header {
     margin-bottom: 80px;
   }
 
+  .fv-contents h2 {
+    font-size: 2.8rem;
+  }
+
   .fv-row {
     flex-direction: column;
   }
 
   .fv-row p {
-    margin: 0 auto;
-    font-size: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
     padding: 50px 0;
+    color: #13181b;
   }
 
   .work-content {
