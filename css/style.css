@@ -248,6 +248,15 @@ header {
   }
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 #works {
   scroll-margin-top: 20vh;
 }
@@ -361,6 +370,10 @@ header {
   text-align: center;
   margin: 200px 0;
   background-color: #fff;
+}
+
+.about h2 {
+  margin: 20px 0;
 }
 
 .about p {
