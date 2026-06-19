@@ -523,6 +523,10 @@ header {
     height: auto;
   }
 
+  .contact-btn {
+    width: 100%;
+  }
+
   .contact-txt {
     font-size: 0.9rem;
   }
