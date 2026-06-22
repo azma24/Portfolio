@@ -49,11 +49,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/works-detail.css" />
@@ -66,12 +66,14 @@
       <div class="header-inner">
         <div class="header-contents">
           <h1><a href="../index.html">Azma</a></h1>
-          <nav>
-            <ul>
-              <li><a href="../about.html">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
+          <div class="header-menu">
+            <nav>
+              <ul>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
@@ -104,7 +106,7 @@
           <div class="work-article-txt">
             <h3>情報の取捨選択と視線の流れ</h3>
             <p class="reveal opacity">
-              作品に集中できる画面を目指し、見ればわかる情報はできるだけ省略しました。Works一覧やAboutページでは見出しをあえて配置せず、視線が作品や本文へ自然に向かうよう設計しています。また、余白や文字組みを調整することで情報のまとまりを整理し、装飾に頼らず内容が伝わる構成を意識しました。一方で、情報を減らしすぎると使いづらさにつながる可能性もあるため、シンプルさとわかりやすさのバランスを探りながら制作を進めました。
+              作品に集中できる画面を目指し、Works一覧では見出しをあえて配置せず、視線が作品や本文へ自然に向かうよう設計しています。また、余白や文字組みを調整することで情報のまとまりを整理し、装飾に頼らず内容が伝わる構成を意識しました。一方で、情報を減らしすぎると使いづらさにつながる可能性もあるため、シンプルさとわかりやすさのバランスを探りながら制作を進めました。
             </p>
           </div>
           <div class="work-article-txt">
@@ -210,15 +212,27 @@
       </section>
 
       <section class="contact" id="contact">
-        <div class="inner">
+        <div class="contact-inner">
           <div class="contact-txt">
-            <p>小さな修正依頼でも、お気軽にご連絡ください。</p>
+            <h2>Contact</h2>
           </div>
           <div class="contact-btn">
-            <a href="mailto:work.azma.i@gmail.com">work.azma.i@gmail.com ↗</a>
+            <a href="mailto:work.azma.i@gmail.com" class="reveal fade-up"
+              >work.azma.i@gmail.com</a
+            >
           </div>
-          <p class="footer-copy">&copy; 2026 Azuma Ichijo.</p>
         </div>
+        <div class="footer-menu">
+          <nav>
+            <ul>
+              <li><a href="../index.html">Top</a></li>
+              <li><a href="../index.html#works">Works</a></li>
+              <li><a href="../about.html">About</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <p class="footer-copy">&copy; 2026 Azuma Ichijo.</p>
       </section>
     </main>
 
