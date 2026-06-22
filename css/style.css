@@ -37,24 +37,17 @@ ul {
 }
 
 h1 {
-  font-size: 2.5rem;
-  font-family: "Shippori Mincho", serif;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
 h2 {
-  font-family: "Shippori Mincho", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h3 {
-  margin-bottom: 10px;
-  font-size: 1.7rem;
-  font-family: "Shippori Mincho", serif;
-}
-
-h4 {
-  margin-bottom: 20px;
-  font-size: 1.5rem;
-  font-family: "Shippori Mincho", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 button {
@@ -90,13 +83,6 @@ button {
   transform: translateY(0);
 }
 
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 header {
   position: fixed;
   top: 0;
@@ -111,6 +97,7 @@ header {
   justify-content: space-between;
   align-items: baseline;
   padding: 0 46px;
+  margin-top: 10px;
 }
 
 .header-contents ul {
@@ -118,61 +105,36 @@ header {
   justify-content: space-between;
   align-items: baseline;
   gap: 20px;
-  font-family: " Shippori Mincho", serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 .header-contents li {
   font-size: 0.9rem;
 }
 
+.header-menu a {
+  border-bottom: 1px solid transparent;
+}
+
+.header-menu a:hover {
+  border-bottom-color: currentColor;
+}
+
 .fv {
   position: relative;
   overflow: hidden;
   min-height: 100dvh;
-  background: #fff;
+  font-family: "Montserrat", sans-serif;
 }
 
-/* コンテンツを前面 */
 .fv > * {
   position: relative;
   z-index: 1;
 }
 
-/* 背景 */
-.fv::before {
-  content: "";
-  position: absolute;
-  inset: -30%;
-  z-index: 0;
-
-  background:
-    radial-gradient(
-      ellipse at 0% 30%,
-      rgba(157, 170, 226, 0.1) 0%,
-      rgba(5, 47, 235, 0.7) 10%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse at 70% 0%,
-      rgba(8, 129, 228, 0.5) 0%,
-      rgba(49, 131, 207, 0.3) 25%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse at 80% 70%,
-      rgba(136, 110, 230, 0.3) 0%,
-      rgba(169, 138, 219, 0.1) 30%,
-      transparent 70%
-    );
-}
-
 .fv-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  /*min-height: 100dvh;*/
-  /* background-color: #a1b8c6; */
-  position: relative;
-  margin-bottom: 50px;
+  overflow: hidden;
 }
 
 .fv-contents {
@@ -180,36 +142,41 @@ header {
 }
 
 .fv-contents h2 {
-  font-size: 7rem;
-  color: #fff;
+  font-size: clamp(10rem, 10vw, 12rem);
+  text-align: center;
+  font-weight: 400;
+  line-height: 0.8;
+  color: #0918c0;
+}
+
+.fv-contents h2 span {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.fv-contents h2 span::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0918c0;
+  animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes reveal {
+  to {
+    transform: translateX(101%);
+  }
 }
 
 .fv-row {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  gap: 30px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .fv-row p {
-  font-size: 1.6rem;
-  font-family: " Shippori Mincho", serif;
-}
-
-.fv-contents > h2,
-.fv-row > h2,
-.fv-row > p {
-  opacity: 0;
-  transform: translateY(10px);
-  animation: fadeUp 1s ease-out forwards;
-}
-
-.fv-row > h2 {
-  animation-delay: 0.3s;
-}
-
-.fv-row > p {
-  animation-delay: 0.6s;
+  font-size: 2.5rem;
+  font-weight: 200;
 }
 
 .scroll-indicator {
@@ -218,13 +185,8 @@ header {
   left: 50%;
   transform: translateX(-50%);
   font-size: 1rem;
-}
-
-.scroll-indicator a {
   opacity: 0;
-  display: inline-block;
-  animation: fadeUp 1s ease-out forwards;
-  animation-delay: 2.2s;
+  animation: flickerUp 2s ease-out 2.1s forwards;
 }
 
 .scroll-indicator::after {
@@ -234,12 +196,43 @@ header {
   height: 100px;
   background: #36454f;
   margin: 20px auto 0;
-
   transform: scaleY(0);
   transform-origin: top;
+  animation: lineGrow 1s ease-out 2.3s forwards;
+}
 
-  animation: lineGrow 1s ease-out forwards;
-  animation-delay: 2.6s;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flickerUp {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  2% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px);
+  }
+  7% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  9% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 @keyframes lineGrow {
@@ -268,8 +261,12 @@ header {
   gap: 85px;
 }
 
+.work-list {
+  margin-top: 250px;
+}
+
 .work-item {
-  margin: 250px 0;
+  margin-top: 150px;
 }
 
 .work-img {
@@ -300,6 +297,12 @@ header {
   transform: scale(1);
 }
 
+.work-text h3 {
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
 .work-note {
   font-size: 0.9rem;
 }
@@ -308,6 +311,8 @@ header {
   color: #757575;
   font-size: 0.8rem;
   margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 .work-role {
@@ -334,6 +339,8 @@ header {
   margin-top: 40px;
   display: inline-block;
   position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 .view-details::before {
@@ -367,9 +374,17 @@ header {
 }
 
 .about {
-  text-align: center;
-  margin: 200px 0;
-  background-color: #fff;
+  text-align: left;
+  background-color: #ffffff;
+  padding: 250px;
+}
+
+.about-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 100px;
+  background-color: #ffffff;
+  border: 1px #000000 solid;
 }
 
 .about h2 {
@@ -407,72 +422,85 @@ header {
   padding-bottom: 10px;
   position: relative;
   overflow: hidden;
-  background: #fff;
+  background: #000000;
+  font-family: "Montserrat", sans-serif;
 }
 
-/* コンテンツを前面 */
+.contact-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 100px;
+  background-color: #fff;
+}
+
 .contact > * {
   position: relative;
   z-index: 1;
 }
 
-/* 背景 */
-.contact::before {
-  content: "";
-  position: absolute;
-  inset: -30%;
-  z-index: 0;
-
-  background:
-    radial-gradient(
-      ellipse at 20% 30%,
-      rgba(8, 50, 235, 0.3) 0%,
-      rgba(90, 120, 255, 0.1) 25%,
-      transparent 55%
-    ),
-    radial-gradient(
-      ellipse at 70% 20%,
-      rgba(150, 170, 255, 0.35) 0%,
-      rgba(150, 170, 255, 0.8) 30%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse at 80% 70%,
-      rgba(120, 190, 255, 0.3) 0%,
-      rgba(120, 190, 255, 0.08) 30%,
-      transparent 60%
-    );
-
-  filter: blur(90px);
-
-  transform-origin: center;
-
-  animation: aurora 10s ease-in-out infinite alternate;
-}
-
 .contact-txt {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .contact-btn {
+  position: relative;
   display: inline-block;
-  text-align: center;
-  padding: 20px 100px;
-  border-radius: 999px;
-  background: #fff;
-  color: #0918c0;
-  border: 1px solid #0918c0;
-  font-size: 0.9rem;
-  line-height: 1;
-  white-space: nowrap;
-  transition:
-    color 0.3s ease,
-    background-color 0.3s ease;
+  padding: 40px 60px;
 }
 
-.contact-btn:hover {
-  background: #0918c0;
+.contact-btn::before,
+.contact-btn::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.contact-btn::before {
+  top: 0;
+  left: 0;
+  border-top: 1px solid currentColor;
+  border-left: 1px solid currentColor;
+}
+
+.contact-btn::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 1px solid currentColor;
+  border-right: 1px solid currentColor;
+}
+
+.contact-btn a::after {
+  content: "";
+  display: inline-block;
+  margin-left: 0.5rem;
+  transition: transform 0.5s ease;
+  transition-delay: 0.8s;
+}
+
+.footer-menu {
   color: #fff;
+  margin: 40px 0;
+}
+
+.footer-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.footer-menu a {
+  border-bottom: 1px solid transparent;
+}
+
+.footer-menu a:hover {
+  border-bottom-color: currentColor;
+}
+
+.footer-copy {
+  color: #fff;
+  margin: 40px;
 }
 
 /* aboutページ */
@@ -481,6 +509,11 @@ header {
   opacity: 0;
   transform: translateY(10px);
   animation: fadein 0.5s ease forwards;
+}
+
+.about-page h2 {
+  margin: 40px 0;
+  font-size: 1.8rem;
 }
 
 @keyframes fadein {
@@ -493,7 +526,7 @@ header {
 .about-page-inner {
   max-width: 700px;
   margin: 0 auto;
-  margin-top: 220px;
+  margin-top: 180px;
   margin-bottom: 150px;
 }
 
@@ -541,11 +574,6 @@ header {
 }
 */
 
-.footer-copy {
-  font-size: 0.7rem;
-  margin-top: 130px;
-}
-
 .to-top {
   position: fixed;
   right: 20px;
@@ -585,16 +613,17 @@ header {
 =========================== */
 @media (max-width: 768px) {
   h1 {
-    font-size: 1.8rem;
+    font-size: 1rem;
   }
 
-  h2 {
-    font-size: 2.5rem;
-    text-align: center;
+  .header-contents {
+    max-width: 400px;
+    gap: 50px;
+    margin-top: 10px;
   }
 
-  .fv-inner {
-    margin-bottom: 80px;
+  .fv-contents {
+    margin-top: 80px;
   }
 
   .fv-contents h2 {
@@ -603,12 +632,13 @@ header {
 
   .fv-row {
     flex-direction: column;
+    margin-top: 0;
   }
 
   .fv-row p {
     text-align: center;
     font-size: 1.4rem;
-    padding: 50px 0;
+    padding: 10px 0;
     color: #13181b;
   }
 
@@ -625,7 +655,7 @@ header {
   }
 
   .work-item {
-    margin: 70px 0;
+    margin-top: 70px;
   }
 
   .work-img {
@@ -651,7 +681,14 @@ header {
   }
 
   .about {
-    margin: 150px 0;
+    margin-bottom: 100px;
+    padding: 0 0;
+  }
+
+  .about-inner {
+    padding: 100px 10px;
+    border: none;
+    text-align: center;
   }
 
   .about-page-inner {
@@ -665,8 +702,25 @@ header {
     line-height: 27px;
   }
 
+  .contact {
+    padding-top: 40px;
+  }
+
+  .contact-inner {
+    max-width: 300px;
+    padding: 60px 24px;
+  }
+
   .contact-btn {
-    padding: 20px 40px;
+    padding: 0 0;
+  }
+
+  .contact-btn::before {
+    display: none;
+  }
+
+  .contact-btn::after {
+    display: none;
   }
 
   .contact-txt {
