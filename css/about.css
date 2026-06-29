@@ -1,0 +1,79 @@
+.about-page {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadein 0.5s ease forwards;
+}
+
+@keyframes fadein {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-page-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.about-page-accent {
+  font-size: 0.8rem;
+  color: #a8a8a8;
+  letter-spacing: 2px;
+}
+
+.about-page h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.about-page h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.about-page-contents {
+  margin-bottom: 100px;
+}
+
+.about-page-content {
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+
+.about-page-skills {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-sns {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.footer-sns p {
+  font-size: 0.8rem;
+}
+
+.github,
+.twitter {
+  margin: 50px 0;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .about-page-inner {
+    margin-top: 120px;
+    margin-bottom: 50px;
+    padding: 0 20px;
+  }
+
+  .about-page-contents {
+    font-size: 0.9rem;
+    line-height: 27px;
+  }
+}
